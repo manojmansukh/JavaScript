@@ -14,8 +14,9 @@ class AddBook extends AddressBook {
 
     addressBook() {
         console.log("#$ Address Book $#");
-        console.log("1. Add a person\n2. Remove person\n3. Edit person's info\n4. Sort by lastName\n5. Sort by zipCode");
+        console.log("1. Add a person\n2. Remove person\n3. Edit person's info\n4. Sort by lastName\n5. Sort by zipCode\n6. Display\n7.Exit");
         var ch = rl.question("Enter your choice:");
+        do{
         if (ch == 1) {
             this.addPerson();
         }
@@ -31,9 +32,17 @@ class AddBook extends AddressBook {
         else if (ch == 5) {
             this.sortByZip();
         }
+        else if (ch == 6) {
+            this.display();
+        }
+        else if (ch == 7) {
+            return;
+            // break;
+        }
         else {
             console.log("Invalid key/input ");
         }
+    }while(ch!=7)
     }
 
     //Add person
@@ -107,7 +116,17 @@ class AddBook extends AddressBook {
         fs.writeFileSync('addressBook.json', JSON.stringify(this.data));
         this.addressBook();
     }
-
+    //display 
+    display(){
+        for(let i=0;i<this.data.person.length;i++){
+            console.log("\nFirst Name:"+this.data.person[i].firstName);
+            console.log("Last Name:"+this.data.person[i].lastName);
+            console.log("Address:"+this.data.person[i].address);
+            console.log("Id:"+this.data.person[i].ID);
+            console.log("ZipCode:"+this.data.person[i].zipCode);
+            
+        }
+    }
     //Sort by name
     sortByName() {
 

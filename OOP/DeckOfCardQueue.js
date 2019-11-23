@@ -30,6 +30,7 @@ class DeckOfCards
         for (let i = 1; i <= 4; i++) {
             console.log("\nPlayer number " + i + " have cards:");
             for (let j = 0; j < 9; j++) {
+                var arr="";
                 console.log(queue.dequeue());
                 k++;
             }
