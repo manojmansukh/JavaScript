@@ -15,7 +15,7 @@ class Stock{
 class StockLinkedList extends Stock{
     manage(){
         do {
-            console.log("\n1. Add company\n2. Remove company\n3. Print list\n4. Write to file\n");
+            console.log("\n1. Add company\n2. Remove company\n3. Print list\n4. Write to file\n5. Exit\n");
             var ch = rl.question("Enter your choice:");
             switch (ch) {
                 case "1":
@@ -30,10 +30,12 @@ class StockLinkedList extends Stock{
                 case "4":
                     this.writeToFile();
                     break;
+                case "5":
+                    return;
                 default:
                     console.log("Enter valid choice");
             }
-        } while (ch <= 4);
+        } while (ch <= 5);
     }
     addList() {
         for (let key in this.value.Company) {

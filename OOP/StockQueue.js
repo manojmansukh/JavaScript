@@ -9,13 +9,13 @@ class Queue {
         this.comp = JSON.parse(company);
         var customer = fs.readFileSync('./jsonFile/CustumerDetails1.json');
         this.cust = JSON.parse(customer);
-        this.queue = new dst.QueueUsingLinkList();
+        
     }
 }
 class StockQueue extends Queue {
 
     addQueue() {
-
+        this.queue = new dst.QueueUsingLinkList();
         do {
             console.log("1. Buy shares\n2. Sell shares\n3. Print company record\n4. Print customer record\n5. Write to file\n6. Print Queue\n");
             var ch = rl.question("Enter your choice:");

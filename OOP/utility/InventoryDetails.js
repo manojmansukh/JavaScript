@@ -139,7 +139,7 @@ inventorycalculate(){
     if(isNaN(ch))throw "enter valid choice."
 
     switch(ch){
-        case 1:
+        case 1: 
             var weight=rl.questionInt("enter how many kg you require:");
             for(var i=0;i<this.data.Rice.length;i++){
                 console.log();
