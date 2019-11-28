@@ -1,0 +1,75 @@
+{
+    "doctor": [
+        {
+            "drName": "Manoj",
+            "drId": "23",
+            "speciality": "Cardiologist",
+            "availability": "AM",
+            "NoOfAppointment": 1
+        },
+        {
+            "drName": "Rani",
+            "drId": "29",
+            "speciality": "Dermatologist",
+            "availability": "PM",
+            "NoOfAppointment": 1
+        },
+        {
+            "drName": "Siddhi",
+            "drId": "20",
+            "speciality": "Alergist",
+            "availability": "Both",
+            "NoOfAppointment": 0
+        },
+        {
+            "drName": "Raj",
+            "drId": "103",
+            "speciality": "Child",
+            "availability": "Both",
+            "NoOfAppointment": 1
+        }
+    ],
+    "patient": [
+        {
+            "pName": "Sager",
+            "pId": "19",
+            "mobNo": "6737435735",
+            "age": "21"
+        },
+        {
+            "pName": "Mayur",
+            "pId": "30",
+            "mobNo": "9011548554",
+            "age": "21"
+        },
+        {
+            "pName": "Alka",
+            "pId": "14",
+            "mobNo": "7798432152",
+            "age": "22"
+        },
+        {
+            "pName": "Mahin",
+            "pId": "15",
+            "mobNo": "8545254521",
+            "age": "23"
+        }
+    ],
+    "cliniqueAppointment": [
+        {
+            "drName": "Manoj",
+            "pName": "Sager",
+            "time": "PM"
+        },
+        {
+            "drName": "Siddhi",
+            "pName": "Mahin",
+            "time": "AM"
+        },
+        {
+            "drName": "Raj",
+            "pName": "Sager",
+            "time": "Both"
+        }
+    ]
+}
