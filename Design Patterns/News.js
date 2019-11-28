@@ -37,8 +37,8 @@ class News
                 //console.log("obseever value:"+this.observer[i].name);
                 //console.log("loaction:"+JSON.stringify(location));
                 
-                //if(this.observer[i].name==location){
-                if(this.observer[i].name===location.name){
+                if(this.observer[i].name==location){
+                //if(this.observer[i].name===location.name){
                     //console.log("obseever value in if:"+this.observer[i].name);
                 //console.log("loaction:"+JSON.stringify(location));
                     this.msg=msg;
@@ -107,5 +107,5 @@ banglore.setSubject(news);
 		
 //now send message to subject
 //news.postMessage("mj");
-//news.postMessage("news of India",banglore.name)
-news.postMessage("news of India",new MyTopicSubscriber("Banglore"))
+news.postMessage("news of India",banglore.name)
+//news.postMessage("news of India",new MyTopicSubscriber("Banglore"))
